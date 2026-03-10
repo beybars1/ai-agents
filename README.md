@@ -75,3 +75,17 @@ Module 3 demonstrates Retrieval-Augmented Generation (RAG) entirely from scratch
    python module3_rag.py
    ```
    *Try asking it "Who is the boss of the club?" or "What is your favorite snack?" based on the hidden data in `dummy_data.txt`.*
+
+### Running Module 4: Agentic Loops & Frameworks (LangGraph)
+Module 4 introduces **LangGraph**, the framework we will use for the rest of the course to build robust agent architectures. It demonstrates the concept of a "StateGraph" where a shared "State" object (in this case, our message history) is passed between "Nodes" (functions or LLMs).
+
+1. Ensure your virtual environment is active.
+2. Install the necessary LangGraph and LangChain packages:
+   ```bash
+   pip install langgraph langchain-openai langchain-core
+   ```
+3. Run the LangGraph bot:
+   ```bash
+   python module4_langgraph.py
+   ```
+   *Notice how the terminal output now explicitly shows `[Node executed: chatbot]` before answering. The flow of data is explicitly controlled by the graph.*
