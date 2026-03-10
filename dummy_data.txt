@@ -1,0 +1,7 @@
+# The Secret Rules of the AI Agents Club
+
+1. The first rule of the AI Agents Club is: Always provide a system prompt.
+2. The second rule of the AI Agents Club is: Never trust user input without validation.
+3. The Supreme Overlord of the club is a golden retriever named "Barkley".
+4. The club's favorite snack is binary code, specifically the sequence 01010100.
+5. In the year 2042, the club plans to automate the process of making coffee worldwide.
