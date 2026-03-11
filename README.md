@@ -89,3 +89,29 @@ Module 4 introduces **LangGraph**, the framework we will use for the rest of the
    python module4_langgraph.py
    ```
    *Notice how the terminal output now explicitly shows `[Node executed: chatbot]` before answering. The flow of data is explicitly controlled by the graph.*
+
+### Running Module 5: Memory & Planning (The Strategist)
+Module 5 combines everything we've learned so far! We use LangGraph to build a true **Agentic Loop** with tools and persistent memory.
+
+Unlike Module 4, this agent has a "ToolNode" added to its graph, and a conditional edge. If the LLM decides it needs to use a tool, the graph pauses the LLM, runs the tool, appends the result to the memory, and then loops *back* to the LLM so it can read the result and continue. 
+
+1. Ensure your virtual environment is active.
+2. Run the Agentic Loop:
+   ```bash
+   python module5_agentic_loop.py
+   ```
+   *Try asking it a multi-stage goal: "What is the weather in London, and what is the temperature in Fahrenheit minus 10?" Watch its internal thought process as it loops through multiple tool calls autonomously!*
+
+### Running Module 6: Multi-Agent Systems (AutoGen)
+Module 6 shifts gears from LangGraph to **AutoGen** to demonstrate how to build Multi-Agent Systems. Instead of one agent doing everything, we create specialized "Personas" (a Researcher and a Writer) and place them in a Group Chat. They will autonomously converse with each other to complete a goal.
+
+1. Ensure your virtual environment is active.
+2. Install AutoGen:
+   ```bash
+   pip install pyautogen
+   ```
+3. Run the AutoGen script:
+   ```bash
+   python module6_autogen.py
+   ```
+   *Provide a topic, sit back, and watch the agents collaborate in real-time!*
