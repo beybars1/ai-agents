@@ -115,3 +115,20 @@ Module 6 shifts gears from LangGraph to **AutoGen** to demonstrate how to build 
    python module6_autogen.py
    ```
    *Provide a topic, sit back, and watch the agents collaborate in real-time!*
+
+### Running Module 7: Production & Evaluation
+In the final module, we move away from terminal scripts and deploy our agent as a **real asynchronous API** using FastAPI and LangGraph's streaming capabilities.
+
+We also build a basic web frontend that connects to this API via Server-Sent Events (SSE) to stream the agent's thought process (tool use) and final response directly to the browser, just like ChatGPT does!
+
+1. Ensure your virtual environment is active.
+2. Install the web framework dependencies:
+   ```bash
+   pip install fastapi uvicorn sse-starlette
+   ```
+3. Start the Production Server:
+   ```bash
+   python module7_production.py
+   ```
+4. Open your web browser and navigate to: **http://127.0.0.1:8000**
+   *Try asking it to "check user ID 123" and watch the frontend update dynamically as the backend LLM uses its database tool!*
